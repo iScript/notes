@@ -26,7 +26,8 @@ $ ssh-keygen -t rsa
 ![袁克强的博客](http://dn-yuankeqiang.qbox.me/0F6F97CD-7321-47A2-872A-5D881797572D.png?imageView/2/w/500)
 
 ###### 2. 复制公钥到远程服务器   
-  
+复制到/home/$USER/.ssh （.ssh目录不存在则创建一个，**保证.ssh和authorized_keys都只有用户自己有写权限，否则验证无效： chmod 700 -R .ssh** ）   
+ 
 ```  
 $ scp id_rsa.pub root@myhost.com:~/.ssh/id_rsa.pub  
 ```  
